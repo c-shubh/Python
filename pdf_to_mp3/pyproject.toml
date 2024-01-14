@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pdf-to-mp3"
+version = "0.1.0"
+description = ""
+authors = ["Shubh A Chudasama <shubh.cs@proton.me>"]
+readme = "README.md"
+packages = [{include = "pdf_to_mp3"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pdfminer-six = "^20231228"
+gtts = "^2.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

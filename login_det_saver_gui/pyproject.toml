@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "login-det-saver-gui"
+version = "0.1.0"
+description = ""
+authors = ["Shubh A Chudasama <shubh.cs@proton.me>"]
+readme = "README.md"
+packages = [{include = "login_det_saver_gui"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

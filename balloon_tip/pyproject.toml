@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "balloon-tip"
+version = "0.1.0"
+description = ""
+authors = ["Shubh A Chudasama <shubh.cs@proton.me>"]
+readme = "README.md"
+packages = [{include = "balloon_tip"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pywin32 = "^306"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

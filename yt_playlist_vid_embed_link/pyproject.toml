@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "yt-playlist-vid-embed-link"
+version = "0.1.0"
+description = ""
+authors = ["Shubh A Chudasama <shubh.cs@proton.me>"]
+readme = "README.md"
+packages = [{include = "yt_playlist_vid_embed_link"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyautogui = "^0.9.54"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

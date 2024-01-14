@@ -6,30 +6,34 @@ import os
 
 def clear():
     # clears the console
-    if os.name == 'posix':
+    if os.name == "posix":
         os.system("clear")
-    elif os.name == 'nt':
+    elif os.name == "nt":
         os.system("cls")
 
 
-MONTHS = {'january': 'Jan',
-          'february': 'Feb',
-          'march': 'Mar',
-          'april': 'Apr',
-          'may': 'May',
-          'june': 'Jun',
-          'july': 'Jul',
-          'august': 'Aug',
-          'september': 'Sep',
-          'october': 'Oct',
-          'november': 'Nov',
-          'december': 'Dec'}
+MONTHS = {
+    "january": "Jan",
+    "february": "Feb",
+    "march": "Mar",
+    "april": "Apr",
+    "may": "May",
+    "june": "Jun",
+    "july": "Jul",
+    "august": "Aug",
+    "september": "Sep",
+    "october": "Oct",
+    "november": "Nov",
+    "december": "Dec",
+}
 
 
 def user_input():
     while True:
         try:
-            birth_day, birth_month, birth_year = input().split()
+            birth_day, birth_month, birth_year = input(
+                "Enter birth day, month, year (space separated) (01 January 1970): "
+            ).split()
             birth_day = int(birth_day)
             birth_month = birth_month.lower()
             if birth_month in MONTHS:
@@ -52,8 +56,7 @@ def user_input():
 
 
 birth_day, birth_month, birth_year = user_input()
-bday = datetime.date(birth_year, time.strptime(
-    birth_month, '%b').tm_mon, birth_day)
+bday = datetime.date(birth_year, time.strptime(birth_month, "%b").tm_mon, birth_day)
 today = datetime.date.today()
 
 then_timestamp = time.mktime(bday.timetuple())
@@ -65,4 +68,5 @@ while True:
     diff = now_timestamp - then_timestamp
     now_year = time.struct_time(datetime.date.today().timetuple()).tm_year
     print(
-        f"Years: {now_year-birth_year}\nDays: {int(diff/86400)}\nHours: {int(diff/3600)}\nSeconds: {int(diff)}")
+        f"Years: {now_year-birth_year}\nDays: {int(diff/86400)}\nHours: {int(diff/3600)}\nSeconds: {int(diff)}"
+    )
