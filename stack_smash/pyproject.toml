@@ -10,6 +10,7 @@ packages = [{include = "stack_smash"}]
 python = "^3.11"
 pyautogui = "^0.9.54"
 numpy = "^1.26.3"
+pillow = "^10.3.0"
 
 
 [build-system]
